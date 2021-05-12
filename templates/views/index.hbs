@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="icon" href="/images/icon.png">
+    <title>Weather</title>
+  </head>
+  <body>
+    <div class="main-content">
+      {{>header}}
+      <p>Use this site to get weather details</p>
+
+      <form id="weatherForm" autocomplete="off">
+        <input type="text" id="weatherInput">
+        <button>Search</button>
+      </form>
+      <p class="loading">Loading Weather Details...</p>
+      <div class="weather">
+        <div class="place"></div>
+        <div class="temperature">
+          <div>
+            <p class="title">Actual Temperature</p>
+            <div class="actual_temperature">
+              <span class="tempValue"></span>&deg;C
+            </div>  
+          </div>
+          <div>
+            <p class="title">Feelslike</p>
+            <div class="feelslike">
+              <span class="feelslikeValue"></span>&deg;C
+            </div>         
+          </div>
+        </div>
+        <div class="description">
+            <img src="" alt="" class="icon">
+            <div class="text">
+            </div>
+        </div>
+      </div>
+    </div>   
+    {{>footer}}
+
+    <script src="/js/script.js"></script>
+  </body>
+</html>
