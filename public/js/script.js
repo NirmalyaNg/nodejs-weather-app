@@ -45,7 +45,7 @@ weatherForm.addEventListener("submit", (e) => {
     alert("Please provide a location");
     loading.style.display = "none";
   } else {
-    fetch(`http://localhost:3000/weather?location=${textInput.value}`)
+    fetch(`/weather?location=${textInput.value}`)
       .then((response) => response.json())
       .then((data) => {
         if (data.error) {

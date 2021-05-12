@@ -6,6 +6,9 @@ const { geocode } = require("./utils/geocode");
 
 const app = express();
 
+// For heroku
+const port = process.env.PORT || 3000;
+
 const publicDirectoryPath = path.join(__dirname, "../public");
 const viewsDirectoryPath = path.join(__dirname, "../templates/views");
 const partialsDirectoryPath = path.join(__dirname, "../templates/partials");
@@ -82,6 +85,6 @@ app.get("*", (req, res) => {
   });
 });
 
-app.listen(3000, () => {
-  console.log("Server is listening on port 3000");
+app.listen(port, () => {
+  console.log("Server is listening on port " + port);
 });
